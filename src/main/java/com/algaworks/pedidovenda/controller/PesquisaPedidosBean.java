@@ -11,7 +11,7 @@ import javax.faces.bean.RequestScoped;
 public class PesquisaPedidosBean {
 
 	private List<Integer> pedidosFiltrados;
-	
+
 	public PesquisaPedidosBean() {
 		pedidosFiltrados = new ArrayList<>();
 		for (int i = 0; i < 50; i++) {
@@ -22,5 +22,5 @@ public class PesquisaPedidosBean {
 	public List<Integer> getPedidosFiltrados() {
 		return pedidosFiltrados;
 	}
-	
+
 }

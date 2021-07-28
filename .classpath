@@ -25,7 +25,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src/main/webapp"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -34,16 +34,6 @@
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Juliane/.m2/repository/org/glassfish/javax.faces/2.1.21/javax.faces-2.1.21.jar" sourcepath="C:/Users/Juliane/.m2/repository/org/glassfish/javax.faces/2.1.21/javax.faces-2.1.21-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.archivename" value="javax.faces-2.1.21.jar"/>
-			<attribute name="maven.groupId" value="org.glassfish"/>
-			<attribute name="maven.artifactId" value="javax.faces"/>
-			<attribute name="maven.version" value="2.1.21"/>
-			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>

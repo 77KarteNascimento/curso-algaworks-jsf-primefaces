@@ -3,6 +3,16 @@ package com.algaworks.pedidovenda.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "endereco")
 public class Endereco implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -16,6 +26,8 @@ public class Endereco implements Serializable {
 	private String cep;
 	private Cliente cliente;
 
+	@Id
+	@GeneratedValue
 	public Long getId() {
 		return id;
 	}
@@ -23,7 +35,7 @@ public class Endereco implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	@Column(nullable = false, length = 150)
 	public String getLogradouro() {
 		return logradouro;
 	}
@@ -31,15 +43,16 @@ public class Endereco implements Serializable {
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
 	}
-
+	
+	@Column(nullable = false, length = 20)
 	public String getNumero() {
 		return numero;
 	}
-
+	
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-
+	@Column(length = 150)
 	public String getComplemento() {
 		return complemento;
 	}
@@ -47,7 +60,8 @@ public class Endereco implements Serializable {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-
+	
+	@Column(nullable = false, length = 60)
 	public String getCidade() {
 		return cidade;
 	}
@@ -56,6 +70,7 @@ public class Endereco implements Serializable {
 		this.cidade = cidade;
 	}
 
+	@Column(nullable = false, length = 60)
 	public String getUf() {
 		return uf;
 	}
@@ -67,7 +82,8 @@ public class Endereco implements Serializable {
 	public String getCep() {
 		return cep;
 	}
-
+	
+	@Column(nullable = false, length = 9)
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
@@ -76,7 +92,9 @@ public class Endereco implements Serializable {
 	public int hashCode() {
 		return Objects.hash(id);
 	}
-
+	
+	@ManyToOne
+	@JoinColumn(name = "cliente_id", nullable = false)
 	public Cliente getCliente() {
 		return cliente;
 	}

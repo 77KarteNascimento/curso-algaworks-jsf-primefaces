@@ -1,16 +1,56 @@
-target/
-.project
-.classpath
-.settings/
-.svn/
-bin/
+#
+# Project specific excludes
+#
 
-# Intellij
-*.ipr
+tomcat
+
+#
+# Default excludes
+#
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# Maven 
+target/
+
+# IntelliJ project files 
 *.iml
-.idea
-out/
+*.iws
+*.ipr
+.idea/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+# NetBeans specific
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+
+# OS
 .DS_Store
-/bootstrap
-/dependencies.xml
-.java-version
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag

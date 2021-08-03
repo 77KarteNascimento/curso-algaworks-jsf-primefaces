@@ -1,18 +1,37 @@
 package com.algaworks.pedidovenda.controller;
 
+
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
+
+import com.algaworks.pedidovenda.model.Produto;
 
 @ManagedBean
-@RequestScoped
+@ViewScoped
+public class CadastroProdutoBean implements Serializable {
 
-public class CadastroProdutoBean {
+	private static final long serialVersionUID = 1L;
+
+	private Produto produto;
 	
-	public void salvar( ) {
-		throw new RuntimeException("Teste de exceçao.");
+	
+	public CadastroProdutoBean() {
+		produto = new Produto();
+	}
+	
+		
+	public void salvar() {
 		
 	}
-
-
+	
+	public Produto getProduto() {
+		return produto;
+	}
+	
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
 }
 	

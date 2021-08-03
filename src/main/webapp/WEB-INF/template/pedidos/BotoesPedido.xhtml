@@ -4,16 +4,12 @@
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:p="http://primefaces.org/ui">
 
-
-
-
-
-
 <p:toolbar style="margin-top: 20px">
     		<p:toolbarGroup>
     			<p:button value="Novo" outcome="/pedidos/CadastroPedido"/>
-    			<p:commandButton value="Salvar" action="#{cadastroPedidoBean.salvar"/>
+    			<p:commandButton value="Salvar" action="#{cadastroPedidoBean.salvar}" />
     		</p:toolbarGroup>
+    		
     		<p:toolbarGroup align="right">
     			<p:commandButton value="Emitir" />
     			<p:commandButton value="Cancelar" />
@@ -21,7 +17,7 @@
     			
     			<p:separator/>
     			
-    			<p:button value="Pesquisa" outcome="/pedidos/PesquisaPedidos"/>
+    			<p:button value="Pesquisa" outcome="/pedidos/PesquisaPedidos" />
     		</p:toolbarGroup>
     	</p:toolbar>
 

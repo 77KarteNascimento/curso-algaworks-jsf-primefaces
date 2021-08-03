@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import javax.enterprise.context.ContextNotActiveException;
+import javax.enterprise.context.spi.Context;
 import javax.enterprise.context.spi.Contextual;
 import javax.enterprise.context.spi.CreationalContext;
 import javax.faces.bean.ViewScoped;
@@ -13,15 +14,14 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.PreDestroyViewMapEvent;
 import javax.faces.event.SystemEvent;
 import javax.faces.event.SystemEventListener;
-import javax.naming.Context;
 
 /**
  * Copied from Seam Faces 3.1.0.
- *
+ * 
  * @author Steve Taylor
  */
 public class ViewScopedContext implements Context, SystemEventListener {
-
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T get(final Contextual<T> component) {
@@ -94,7 +94,7 @@ public class ViewScopedContext implements Context, SystemEventListener {
 	 * contextual instances. This should (theoretically!) also get fired if the
 	 * webapp closes, so there should be no need to manually track all view
 	 * scopes and destroy them at a shutdown.
-	 *
+	 * 
 	 * @see javax.faces.event.SystemEventListener#processEvent(javax.faces.event.SystemEvent)
 	 */
 	@Override
